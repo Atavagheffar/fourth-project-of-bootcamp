@@ -1,0 +1,18 @@
+body {
+  font-family: sans-serif;
+  text-align: center;
+  direction: rtl;
+  background: #b3b3b3;
+}
+.forecast {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+.day {
+  background: white;
+  padding: 10px;
+  border-radius: 10px;
+  width: 80px;
+}
