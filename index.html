@@ -7,17 +7,29 @@
     <title>Document</title>
   </head>
   <body>
-    <h1>آب و هوای الان - تهران</h1>
-    <p id="today"></p>
-    <img id="icon" width="100" />
-    <p><strong>دما:</strong> <span id="temp"></span> °C</p>
-    <p><strong>رطوبت:</strong> <span id="humidity"></span> ٪</p>
-    <p><strong>باد:</strong> <span id="wind"></span> km/h</p>
-    <p><strong>وضعیت:</strong> <span id="desc"></span></p>
+    <!-- <h1>تهران</h1> -->
+    <img id="pic" />
+    <div id="mainInfo">
+      <p id="cityName"></p>
+      ,
+      <p id="today"></p>
+    </div>
 
-    <h2>پیش‌بینی ۵ روز آینده</h2>
+    <p>
+      <strong><span id="temp"></span></strong>
+    </p>
+    <div id="wBox1">
+      <p><strong>رطوبت</strong> <span id="humidity"></span></p>
+      <p><strong>باد</strong> <span id="wind"></span></p>
+      <!-- <p><strong>وضعیت:</strong> <span id="desc"></span></p> -->
+    </div>
+
+    <h2>
+      ۵ روز آینده
+      <p id="cityName2"></p>
+    </h2>
     <div class="forecast" id="forecast"></div>
 
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
   </body>
 </html>

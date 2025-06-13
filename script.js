@@ -7,23 +7,27 @@ fetch(
 )
   .then((res) => res.json())
   .then((data) => {
-    document.getElementById("temp").textContent = data.main.temp;
+    // document.getElementById("ata").textContent = data.main.humidity;
+    document.getElementById("temp").textContent = parseInt(data.main.temp);
+    document.getElementById("temp").style.fontSize = "80px";
+    document.getElementById("temp").style.fontWeight = "600";
+    // document.getElementById("temp").after.conte = "°";
+    // °
     document.getElementById("humidity").textContent = data.main.humidity;
     document.getElementById("wind").textContent = data.wind.speed;
-    document.getElementById("desc").textContent = data.weather[0].description;
-    document.getElementById(
-      "icon"
-    ).src = `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
-
+    // document.getElementById("desc").textContent = data.weather[0].description;
+    // ************************************************************
+    document.getElementById("pic").src = `./pic/sunny_color.png`;
+    document.getElementById("pic").style.width = "100px";
+    document.getElementById("pic").style.height = "100px";
+    // ************************************************************
+    document.getElementById("cityName").textContent = data.name;
+    document.getElementById("cityName2").textContent = data.name;
+    // ************************************************************
     const today = new Date();
     document.getElementById("today").textContent = today.toLocaleDateString(
       "fa-IR",
-      {
-        weekday: "long",
-        year: "numeric",
-        month: "long",
-        day: "numeric",
-      }
+      { day: "numeric", weekday: "long", month: "long" }
     );
   });
 
@@ -49,9 +53,9 @@ fetch(
       const div = document.createElement("div");
       div.className = "day";
       div.innerHTML = `
-        <p>${dayName}</p>
-        <img src="${iconUrl}" width="50">
+        <img src="${iconUrl}" width="48">
         <p>${Math.round(item.main.temp)}°</p>
+        <p>${dayName}</p>
       `;
       forecastContainer.appendChild(div);
     });
