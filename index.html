@@ -4,9 +4,82 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
     <title>Api forecast weather</title>
   </head>
   <body>
+    <nav>
+      <div id="weather-info" class="weather-box">
+        <p id="dropDownmenu">
+          <svg
+            width="32"
+            height="32"
+            viewBox="0 0 32 32"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              opacity="0.4"
+              d="M27.4935 11.2667C26.0935 5.10667 20.7201 2.33333 16.0001 2.33333C16.0001 2.33333 16.0001 2.33333 15.9868 2.33333C11.2801 2.33333 5.89346 5.09333 4.49346 11.2533C2.93346 18.1333 7.14679 23.96 10.9601 27.6267C12.3735 28.9867 14.1868 29.6667 16.0001 29.6667C17.8135 29.6667 19.6268 28.9867 21.0268 27.6267C24.8401 23.96 29.0535 18.1467 27.4935 11.2667Z"
+              fill="#01CD98"
+            />
+            <path
+              d="M16 17.9467C18.3196 17.9467 20.2 16.0663 20.2 13.7467C20.2 11.4271 18.3196 9.54667 16 9.54667C13.6805 9.54667 11.8 11.4271 11.8 13.7467C11.8 16.0663 13.6805 17.9467 16 17.9467Z"
+              fill="#051320"
+            />
+          </svg>
+<p id="navCityname">          انتخاب شهر
+</p>
+          <svg
+            width="20"
+            height="20"
+            viewBox="0 0 20 20"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M9.99992 12.5L5.83325 8.33333H14.1666L9.99992 12.5Z"
+              fill="#051320"
+            />
+          </svg>
+        </p>
+      </div>
+      <div class="city-radio-group" id="myDropdown">
+        <label>
+          <input type="radio" name="city" value="Tehran" checked />
+          تهران
+        </label>
+        <label>
+          <input type="radio" name="city" value="Isfahan" />
+          اصفهان
+        </label>
+        <label>
+          <input type="radio" name="city" value="Shiraz" />
+          شیراز
+        </label>
+        <label>
+          <input type="radio" name="city" value="Mashhad" />
+          مشهد
+        </label>
+        <label>
+          <input type="radio" name="city" value="Tabriz" />
+          تبریز
+        </label>
+      </div>
+
+      <div id="mainName">StarWeather</div>
+
+      <!-- <div class="dropdown-container">
+        <label for="">
+          <input type="radio" name="radioCity" id="" value="tehran" />tehran
+        </label>
+      </div> -->
+    </nav>
     <img id="weatherPic" />
     <p id="weatherDesc"></p>
     <div id="mainInfo">
