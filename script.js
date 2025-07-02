@@ -41,7 +41,7 @@ function fetchWeather(city) {
     .then((res) => res.json())
     .then((data) => {
       document.getElementById("temp").textContent = parseInt(data.main.temp);
-      document.getElementById("temp").style.fontSize = "70px";
+      document.getElementById("temp").style.fontSize = "60px";
       document.getElementById("temp").style.fontWeight = "600";
 
       document.getElementById("humidity").textContent = data.main.humidity;

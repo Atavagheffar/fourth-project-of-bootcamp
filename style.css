@@ -24,7 +24,7 @@ body {
   display: flex;
   justify-content: center;
   gap: 10px;
-  margin-top: 20px;
+  margin-top: 10px;
 }
 .day {
   padding: 12px 8px;
@@ -41,16 +41,17 @@ body {
 }
 .day > p:nth-child(3) {
   font-family: "Vazir";
-  font-weight: 600;
+  font-weight: 400;
   font-size: 10px;
   text-align: center;
-  margin-bottom: 8px;
-  margin-top: 8px;
+  margin-bottom: 5px;
+  margin-top: 5px;
+  color: #b3b3b3;
 }
 .day > p:nth-child(4) {
   font-family: "Vazir";
-  font-weight: 600;
-  font-size: 16px;
+  font-weight: 500;
+  font-size: 14px;
   text-align: center;
 }
 #temp::after {
@@ -108,7 +109,11 @@ h2 {
   flex-direction: row;
   justify-content: flex-start;
   margin: auto;
-  width: 30%;
+  width: 100%;
+  padding-right: 35%;
+  font-family: "Vazir";
+  font-weight: 400;
+  font-size: 16px;
 }
 #cityName2::before {
   content: "در ";
@@ -145,6 +150,8 @@ nav {
   background-color: #b3b3b34d;
   border: 1px solid #ccc;
   border-radius: 8px;
+  backdrop-filter: blur(10px);
+
   padding: 20px;
   width: 160px;
   display: none;
@@ -191,4 +198,57 @@ nav {
   border-radius: 8px;
   text-align: center;
   cursor: pointer;
+}
+/*************************** fooooter **/
+#footer {
+  width: 100%;
+  padding: 2%;
+  display: flex;
+  flex-direction: row;
+  /* flex-wrap: nowrap; */
+  justify-content: center;
+  gap: 10px;
+  align-items: center;
+}
+#footer > p {
+  /* font-family: KalamehFaNum; */
+  font-weight: 300;
+  font-size: 12px;
+  text-align: right;
+}
+#footer > p > span {
+  color: #01cd98;
+  /* font-family: KalamehFaNum; */
+  font-weight: 500;
+  font-size: 12px;
+  text-align: right;
+}
+/***************** responsive for phone */
+@media (max-width: 426px) {
+  body {
+    /* background-color: rgba(0, 255, 255, 0.068); */
+    padding: 1%;
+  }
+  nav {
+    /* background-color: aqua; */
+    padding: 1% 2%;
+    justify-content: space-between;
+    margin-bottom: 5px;
+  }
+  .city-radio-group {
+    top: 9vh;
+    right: 2vw;
+    backdrop-filter: blur(10px);
+  }
+  #wBox1 {
+    width: 90%;
+  }
+  h2 {
+    text-align: start;
+    padding: 0 15px;
+  }
+  .forecast {
+    width: 95%;
+    margin: 5px auto;
+  }
 }
